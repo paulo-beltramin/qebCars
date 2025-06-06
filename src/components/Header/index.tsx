@@ -1,12 +1,22 @@
-import logo from '../images/logo.png'
+import { Link, useNavigate } from 'react-router'
 import { FiUser, FiLogIn } from "react-icons/fi"
+import { signOut } from 'firebase/auth'
+import { useContext } from 'react'
 
+import { authContext } from '../Context/authContext'
+import logo from '../images/logo.png'
 import style from './style.module.scss'
-import { Link } from 'react-router'
+import { auth } from '../Services/db'
 
 export const Header = () => {
 
-    const user = false
+    const { enabled } = useContext(authContext)
+   const navigate = useNavigate()
+
+    const handleLogout = () => {
+        signOut(auth)
+        navigate('/')
+    }
 
 
     return (
@@ -20,11 +30,13 @@ export const Header = () => {
                         <img src={logo} alt="" />
                     </div>
                     <div>
-                        {user ? (
-                            <FiUser size={24} />
+                        {enabled ? (
+                            <FiUser size={24} onClick={handleLogout} title='Sair' style={{
+                                cursor: "pointer"
+                            }} />
                         ) :
                             <Link to={'/login'}>
-                                <FiLogIn size={24} />
+                                <FiLogIn size={24} title='Login' />
                             </Link>
                         }
                     </div>

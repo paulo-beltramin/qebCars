@@ -63,7 +63,7 @@ export const Login = () => {
 
       <div>
         <p>
-          Ainda não possue cadastro? <Link to={'/cadastro'}>Cadastre-se</Link>
+          Ainda não possue cadastro? <Link to={'/cadastrarUsuario'}>Cadastre-se</Link>
         </p>
       </div>
     </div>
