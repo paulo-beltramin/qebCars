@@ -6,6 +6,7 @@ import { Cadastro } from "../pages/Cadastro";
 import { Detalhes } from "../pages/Detalhes";
 import { NewCar } from "../pages/NewCar";
 import { Painel } from "../pages/Painel";
+import { Private } from "../components/Private";
 
 
 
@@ -25,12 +26,12 @@ const routes = createBrowserRouter([
 
             {
                 path: '/painel',
-                element: <Painel />
+                element: <Private><Painel /></Private>
             },
 
             {
                 path: '/cadastrarVeiculo',
-                element: <NewCar />
+                element: <Private><NewCar /></Private>
             },
 
         ]
