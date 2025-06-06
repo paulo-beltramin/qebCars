@@ -30,7 +30,7 @@ export const Cadastro = () => {
             color: 'white'
           }
         })
-        navigate('/datalhes')
+        navigate('/painel')
 
       }).catch((error) => {
         console.log(error)

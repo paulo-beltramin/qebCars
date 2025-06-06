@@ -31,7 +31,7 @@ export const Login = () => {
           }
         })
 
-        navigate('/detalhes')
+        navigate('/painel')
       }).catch(() => {
         toast.error('Erro: Verifique os dados digitados', {
           style: {

@@ -3,6 +3,9 @@ import { Layout } from "../components/layout";
 import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 import { Cadastro } from "../pages/Cadastro";
+import { Detalhes } from "../pages/Detalhes";
+import { NewCar } from "../pages/NewCar";
+import { Painel } from "../pages/Painel";
 
 
 
@@ -15,6 +18,21 @@ const routes = createBrowserRouter([
                 element: <Home />
             },
 
+            {
+                path: '/detalhes',
+                element: <Detalhes />
+            },
+
+            {
+                path: '/painel',
+                element: <Painel />
+            },
+
+            {
+                path: '/cadastrarVeiculo',
+                element: <NewCar />
+            },
+
         ]
 
     },
@@ -25,7 +43,7 @@ const routes = createBrowserRouter([
     },
 
     {
-        path: '/cadastro',
+        path: '/cadastrarUsuario',
         element: <Cadastro />
     }
 ])
