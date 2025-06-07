@@ -1,6 +1,10 @@
+import { Header2 } from "../../components/Header2"
 
 export const NewCar = () => {
   return (
-    <div>NewCar</div>
+    <div>
+      <Header2/>
+      teste
+    </div>
   )
 }

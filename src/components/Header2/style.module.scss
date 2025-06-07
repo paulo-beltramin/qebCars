@@ -1,0 +1,25 @@
+.container {
+    max-width: 68%;
+    margin: 0 auto;
+    background-color: #E11138;
+    border-radius: 8px;
+
+    &__header {
+        ul {
+            display: flex;
+            padding: 12px 18px;
+            gap: 16px;
+
+              a{
+                text-decoration: none;
+              }
+
+            li {
+                font-size: 16px;
+                 color: white;
+                font-weight: bold;
+               
+            }
+        }
+    }
+}

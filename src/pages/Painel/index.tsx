@@ -1,6 +1,8 @@
-
+import { Header2 } from "../../components/Header2"
 export const Painel = () => {
   return (
-    <div>Painel</div>
+    <div>
+      <Header2/>
+    </div>
   )
 }
