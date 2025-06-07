@@ -1,0 +1,67 @@
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 32px;
+
+    @media screen and (max-width:480px) {
+        width: 90%;
+    }
+
+    &__upload {
+        background-color: white;
+        padding: 8px;
+        height: 162px;
+        border-radius: 8px;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid gray;
+            height: 145px;
+            width: 228px;
+        }
+    }
+
+    .forms {
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+        margin: 32px 0;
+
+        @media screen and (max-width:480px) {
+            width: 100%;
+        }
+
+        &__inputAge {
+            display: flex;
+            column-gap: 28px;
+
+            input {
+                width: 300px;
+
+                @media screen and (max-width:480px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        input {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            outline: none;
+            border: 1px solid #D3D3D3;
+        }
+
+        textarea {
+            height: 102px;
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #D3D3D3;
+            outline: none;
+
+        }
+    }
+}
