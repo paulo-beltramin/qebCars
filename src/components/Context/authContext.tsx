@@ -5,7 +5,8 @@ import { auth } from "../Services/db";
 
 type AuthProps = {
     enabled: boolean,
-    authLoading: boolean
+    authLoading: boolean,
+    user: UserProps | null
 }
 
 type ProviderProps = {
@@ -51,7 +52,9 @@ export const AuthProvider = ({ children }: ProviderProps) => {
     return (
         <authContext.Provider value={{
             enabled: !!user,
-            authLoading
+            authLoading,
+            user
+            
         }}
 
         >

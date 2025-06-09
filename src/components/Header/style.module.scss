@@ -1,11 +1,14 @@
 .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     width: 100%;
 
-    @media screen and (max-width:840px){
+    @media screen and (max-width:840px) {
         width: 100%;
         padding: 0 16px;
+
     }
 
     .icons {
@@ -17,6 +20,30 @@
         height: 76px;
         align-items: center;
         margin-bottom: 40px;
+
+        &__painel {
+            border: 1px solid gray;
+            padding: 8px;
+            border-radius: 8px;
+            color: black;
+            margin-left: 16px;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                background-color: #E11138;
+                color: white;
+                transition: all ease .5s;
+            }
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
     }
 
 }

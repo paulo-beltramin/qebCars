@@ -4,17 +4,16 @@
      width: 100%;
      margin: 0 auto;
 
-     @media screen and (max-width:480px){
-        width: 90%;
+     @media screen and (max-width:480px) {
+         width: 90%;
      }
-
-
 
      .list {
 
          display: grid;
          grid-template-columns: repeat(3, 1fr);
          gap: 40px;
+         margin-bottom: 32px;
 
          @media screen and (max-width:480px) {
              display: grid;
@@ -31,8 +30,6 @@
          }
 
          li {
-
-
 
              img {
 

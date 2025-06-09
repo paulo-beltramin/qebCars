@@ -1,22 +1,17 @@
-import { Link, useNavigate } from 'react-router'
-import { FiUser, FiLogIn } from "react-icons/fi"
-import { signOut } from 'firebase/auth'
+
 import { useContext } from 'react'
+import { FiUser } from "react-icons/fi"
 
 import { authContext } from '../Context/authContext'
 import logo from '../images/logo.png'
 import style from './style.module.scss'
-import { auth } from '../Services/db'
+import { Link } from 'react-router'
+
 
 export const Header = () => {
 
     const { enabled } = useContext(authContext)
-   const navigate = useNavigate()
-
-    const handleLogout = () => {
-        signOut(auth)
-        navigate('/')
-    }
+   
 
 
     return (
@@ -26,17 +21,22 @@ export const Header = () => {
 
 
                 <span className={style.icons}>
-                    <div>
-                        <img src={logo} alt="" />
-                    </div>
+                    <Link to={'/'}>
+                        <div>
+                            <img src={logo} alt="" />
+                        </div></Link>
                     <div>
                         {enabled ? (
-                            <FiUser size={24} onClick={handleLogout} title='Sair' style={{
-                                cursor: "pointer"
-                            }} />
+                            <>
+                                <FiUser size={24}  title='Sair' style={{
+                                    cursor: "pointer"
+                                }} />
+
+                                <Link to={'/painel'} className={style.icons__painel}>Meu painel</Link>
+                            </>
                         ) :
                             <Link to={'/login'}>
-                                <FiLogIn size={24} title='Login' />
+                                <button>Faça Login</button>
                             </Link>
                         }
                     </div>
