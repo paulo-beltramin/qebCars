@@ -1,8 +1,7 @@
 import { useContext, type ReactNode } from "react"
 import { authContext } from "../Context/authContext"
-import toast from "react-hot-toast"
 import { Navigate } from "react-router"
-import { AiOutlineYahoo } from "react-icons/ai"
+
 
 type PrivateProps = {
     children: ReactNode
