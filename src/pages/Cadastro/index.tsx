@@ -23,7 +23,7 @@ export const Cadastro = () => {
 
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
-        toast(`Cadastrado com sucesso,bem vindo:${name.slice(0, 5)}`, {
+        toast(`bem vindo(a)  ${name.slice(0, 5)}`, {
           style: {
             backgroundColor: 'green',
             fontWeight: 'bold',
