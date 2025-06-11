@@ -1,9 +1,11 @@
-import {  useState, type FormEvent, } from 'react'
+import { useState, type FormEvent, } from 'react'
 import { FiUpload } from "react-icons/fi";
 
 
 import { Header2 } from "../../components/Header2"
 import style from './style.module.scss'
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../../components/Services/db';
 
 export const NewCar = () => {
 
@@ -21,6 +23,19 @@ export const NewCar = () => {
   const handleRegisterCar = (e: FormEvent) => {
     e.preventDefault()
 
+    const addcars = addDoc(collection(db, "cars"), {
+      name: name,
+      model: model,
+      age: age,
+      km: km,
+      price: price,
+      city: city,
+      contact: contact,
+      description: description,
+      created: new Date()
+    })
+
+    console.log(addcars)
   }
 
   return (

@@ -4,6 +4,7 @@
     background-color: white;
     width: 1176px;
     padding: 24px 16px;
+    margin: 0 auto;
 
     @media screen and (max-width:480px) {
         width: 100%;
@@ -11,7 +12,6 @@
 
     }
 
-    margin: 0 auto;
 
     input {
         width: 890px;
